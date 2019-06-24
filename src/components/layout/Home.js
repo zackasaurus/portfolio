@@ -3,9 +3,9 @@ import React, { Component } from 'react'
 export default class Home extends Component {
     render() {
         return (
-            <div class="main" id="home">
+            <div className="main" id="home">
                 <h1 className="lg-heading">
-                    Zachary <span class="text-secondary">Bogard</span>
+                    Zachary <span className="text-secondary">Bogard</span>
                 </h1>
                 <h2 className="sm-heading">
                     Software Developer / Designer
