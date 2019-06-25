@@ -10,17 +10,15 @@
 
 
 
-header {
-    position: fixed;
-    z-index: 2;
-    width: 100%;
-}
+
 
 .text-secondary {
     color: $color-secondary-1;
 }
 
 .main {
+    // background-color: green;
+    // position: relative;
     padding: 4rem;
     height: 100%;
 
@@ -32,12 +30,12 @@ header {
 
             &:hover {
                 color: $color-secondary-1;
-                @include easeOut();
+                @include easeOut1();
             }
         }
     }
 
     h1 {
-        margin-top: 20vh;
+        // margin-top: 5vh;
     }
 }

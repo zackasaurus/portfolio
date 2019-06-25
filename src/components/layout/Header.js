@@ -26,7 +26,8 @@ export default class Header extends Component {
 
         let menuClass = {
             menuBtn: `menu-btn ${this.state.showMenu ? 'close' : ''}`,
-            menuNav: `menu-nav ${this.state.showMenu ? 'show' : ''}`
+            menuNav: `menu-nav ${this.state.showMenu ? 'show' : ''}`,
+            menu: `menu ${this.state.showMenu ? 'show' : ''}`
         }
         // let menuBtnClass = 'show'
         // console.log(this.state.showMenu)
@@ -61,7 +62,7 @@ export default class Header extends Component {
                 </a>
             </li>
         </ul>
-        let menu = <div className="menu">
+        let menu = <div className={menuClass.menu}>
             {menuNav}
         </div>
 

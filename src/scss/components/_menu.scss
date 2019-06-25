@@ -27,11 +27,13 @@ header {
     &.close {
         transform: rotate(180deg) translate(0, 8px);
 
+
         .btn-line {
 
             // Line 1 - Rotate
             &:nth-child(1) {
                 transform: rotate(45deg) translate(5px, 5px);
+                background: $color-silver-1;
             }
 
             // Line 2 - Hide
@@ -43,11 +45,163 @@ header {
 
             // Line 3 - Rotate
             &:nth-child(3) {
-                transform: rotate(-45deg) translate(8px, -8px)
+                transform: rotate(-45deg) translate(8px, -8px);
+                background: $color-silver-1;
             }
         }
     }
 }
+
+.menu {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    opacity: 0.9;
+    visibility: hidden;
+    // text-align: center;
+
+    font-weight: 300;
+    font-size: 110%;
+
+
+
+    @include easeOut1;
+
+    &.show {
+        margin: 0;
+        // padding: 0;
+        opacity: 0.9;
+        visibility: visible;
+    }
+
+    &-nav {
+        background: linear-gradient(to right bottom, $color-secondary-2, $color-secondary-1);
+        // background-color: $color-secondary-1;
+        margin: 0;
+        padding: 0;
+        // padding-left: 2rem;
+        padding-top: 4rem;
+        width: 100%;
+        // float: right;
+        // height: 40vh;
+        transform: translate3d(0, -100%, 0);
+        @include easeOut1;
+
+        .nav-item {
+            // padding: 1rem;
+
+            border-bottom: 1px solid $color-silver-1;
+            padding: 0.75rem 3rem;
+            text-transform: uppercase;
+            @include easeOut2();
+
+            .nav-link {
+                display: inline-block;
+                color: $color-silver-1;
+                // margin: 3rem;
+                transform: translateY(200%);
+                // @include easeOut2();
+            }
+
+            &:hover {
+                // background: linear-gradient(to right bottom, $color-silver-3, $color-silver-1);
+                // background: $color-primary-1;
+
+                a {
+                    color: $color-secondary-2;
+                    // transition-delay: 0;
+                }
+
+
+            }
+
+
+        }
+
+        &.show {
+            // Slide in from top
+            transform: translate3d(0, 0, 0);
+
+            .nav-item {
+
+                overflow: hidden;
+
+
+
+
+
+
+
+                &:hover {
+
+                    // background: linear-gradient(to right bottom, $color-silver-3, $color-silver-1);
+                    // transition: all 0.3s;
+                    background-color: $color-silver-3;
+
+
+                    color: $color-secondary-1;
+                    transition-delay: 0s;
+
+
+
+                }
+
+            }
+
+            @for $x from 1 through 4 {
+                :nth-child(#{$x}) .nav-link {
+
+                    transform: translateY(0);
+                    transition: all 0.3s ease;
+                    transition-delay: $x * 75ms;
+                    transition-property: transform;
+
+                }
+            }
+
+
+            // @for $x from 1 through 4 {
+            //     .nav-item:nth-child(#{$x}) {
+            //         // transform: translateY(0);
+            //         transition-delay: $x * .2s;
+            //         // transition-property: transform;
+            //     }
+            // }
+
+            // @for $x from 1 through 4 {
+            //     .nav-item:nth-child(#{$x}) {
+            //         transition-delay: $x * 0.2s;
+            //     }
+
+            // }
+
+
+
+            // @for $x from 1 through 4 {
+            //     .nav-item:nth-child(#{$x}) {
+            //         transition-delay: $x * 0.2s;
+            //     }
+
+
+            // }
+        }
+
+
+
+    }
+
+
+
+
+}
+
+// Delay each nav item slide by 0.1s
+// @for $x from 1 through 4 {
+//     .nav-item:nth-child(#{$x}) {
+//         transition-delay: $x * 0.3s;
+//     }
+// }
+
 
 a {
     color: black;
