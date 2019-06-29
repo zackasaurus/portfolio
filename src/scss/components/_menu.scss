@@ -1,17 +1,11 @@
-header {
-    position: fixed;
-    z-index: 2;
-    width: 100%;
-}
-
-// Menu Button
+/////////////////////////////////////////////////
+// MENU BUTTON
 .menu-btn {
-    position: absolute;
+    position: fixed;
     z-index: 3;
     right: 2rem;
     top: 2rem;
     cursor: pointer;
-    // @include easeOut;
     transition: all 0.3s ease;
 
     .btn-line {
@@ -19,13 +13,13 @@ header {
         height: 3px;
         margin-bottom: 6px;
         background: black;
-        transition: all 0.3s ease;
+        transition: all 0.5s ease;
 
     }
 
     // Rotate Into X With Menu Lines
     &.close {
-        transform: rotate(180deg) translate(0, 8px);
+        transform: rotate(180deg) translate(-1px, 8px);
 
 
         .btn-line {
@@ -38,9 +32,7 @@ header {
 
             // Line 2 - Hide
             &:nth-child(2) {
-
-                opacity: 0;
-
+                transform: scale(0);
             }
 
             // Line 3 - Rotate
@@ -52,97 +44,80 @@ header {
     }
 }
 
+/////////////////////////////////////////////////
+// MENU
 .menu {
+    float: left;
+    z-index: 2;
+    // position: relative;
     position: fixed;
     top: 0;
-    width: 100%;
-    opacity: 0.9;
+    height: 0vh;
+    width: 100vw;
+    // opacity: 0;
     visibility: hidden;
     // text-align: center;
-
+    overflow: hidden;
     font-weight: 300;
     font-size: 110%;
+    background: linear-gradient(to right bottom, $color-secondary-2, $color-secondary-1);
 
 
 
-    @include easeOut1;
+    transition: .3s all ease-out;
+
+
 
     &.show {
+
+        height: 40vh;
         margin: 0;
-        // padding: 0;
-        opacity: 0.9;
+        width: 100%;
+        margin: 0;
+        opacity: 1;
         visibility: visible;
     }
 
     &-nav {
-        background: linear-gradient(to right bottom, $color-secondary-2, $color-secondary-1);
-        // background-color: $color-secondary-1;
         margin: 0;
         padding: 0;
-        // padding-left: 2rem;
-        padding-top: 4rem;
+        padding-top: 5rem;
         width: 100%;
-        // float: right;
-        // height: 40vh;
-        transform: translate3d(0, -100%, 0);
-        @include easeOut1;
 
         .nav-item {
-            // padding: 1rem;
-
-            border-bottom: 1px solid $color-silver-1;
-            padding: 0.75rem 3rem;
+            overflow: hidden;
+            padding: .5rem 2.25rem;
             text-transform: uppercase;
-            @include easeOut2();
+            letter-spacing: 3px;
 
             .nav-link {
                 display: inline-block;
                 color: $color-silver-1;
-                // margin: 3rem;
                 transform: translateY(200%);
-                // @include easeOut2();
             }
-
-            &:hover {
-                // background: linear-gradient(to right bottom, $color-silver-3, $color-silver-1);
-                // background: $color-primary-1;
-
-                a {
-                    color: $color-secondary-2;
-                    // transition-delay: 0;
-                }
-
-
-            }
-
-
         }
 
+
+
         &.show {
+            // transition: all 1.3s ease;
             // Slide in from top
             transform: translate3d(0, 0, 0);
 
-            .nav-item {
 
+            .nav-item {
+                // transition: all 1.3s ease;
                 overflow: hidden;
 
-
-
-
-
-
+                transition: all .3s ease;
 
                 &:hover {
+                    // transition: all 1.3s ease;
 
-                    // background: linear-gradient(to right bottom, $color-silver-3, $color-silver-1);
-                    // transition: all 0.3s;
-                    background-color: $color-silver-3;
-
-
-                    color: $color-secondary-1;
+                    border-left: 15px solid white;
+                    background-color: rgba(255, 255, 255, 0.1);
                     transition-delay: 0s;
-
-
+                    // width: 20%;
 
                 }
 
@@ -159,31 +134,6 @@ header {
                 }
             }
 
-
-            // @for $x from 1 through 4 {
-            //     .nav-item:nth-child(#{$x}) {
-            //         // transform: translateY(0);
-            //         transition-delay: $x * .2s;
-            //         // transition-property: transform;
-            //     }
-            // }
-
-            // @for $x from 1 through 4 {
-            //     .nav-item:nth-child(#{$x}) {
-            //         transition-delay: $x * 0.2s;
-            //     }
-
-            // }
-
-
-
-            // @for $x from 1 through 4 {
-            //     .nav-item:nth-child(#{$x}) {
-            //         transition-delay: $x * 0.2s;
-            //     }
-
-
-            // }
         }
 
 
@@ -194,14 +144,6 @@ header {
 
 
 }
-
-// Delay each nav item slide by 0.1s
-// @for $x from 1 through 4 {
-//     .nav-item:nth-child(#{$x}) {
-//         transition-delay: $x * 0.3s;
-//     }
-// }
-
 
 a {
     color: black;

@@ -1,17 +1,12 @@
 import React from 'react';
 import Header from './components/layout/Header'
-import Home from './components/layout/Home'
+import MainContent from './components/layout/MainContent'
 
 function App() {
   return (
-    <div className="App">
+    <div className="App wrapper">
       <Header></Header>
-      <div className="wrapper">
-        <Home></Home>
-        <Home></Home>
-        <Home></Home>
-      </div>
-
+      <MainContent></MainContent>
     </div>
   );
 }

@@ -26,6 +26,15 @@
   <!-- Font Awesome -->
   <script src="https://kit.fontawesome.com/ab373758b8.js"></script>
 
+  <!-- Particle JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js"></script>
+  <script>
+    /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
+    particlesJS.load('particles-js', 'particles-js', '../src/particles.json', function () {
+      console.log('particles.json loaded...')
+    });
+  </script>
+
   <title>Welcome To My Portfolio</title>
 </head>
 

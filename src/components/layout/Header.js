@@ -42,7 +42,7 @@ export default class Header extends Component {
 
         let menuNav = <ul className={menuClass.menuNav}>
             <li className="nav-item">
-                <a href="/" className="nav-link">
+                <a href="#home" className="nav-link">
                     Home
                 </a>
             </li>
@@ -73,10 +73,10 @@ export default class Header extends Component {
         // }
 
         return (
-            <header>
+            <div class="">
                 {menuBtn}
                 {menu}
-            </header>
+            </div>
         )
     }
 }
