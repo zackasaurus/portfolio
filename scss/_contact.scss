@@ -1,0 +1,84 @@
+#contact {
+    display: relative;
+    // text-align: center;
+    margin-top: 6rem;
+    background: $color-primary-1;
+    // min-height: 50vh;
+    // height: 100vh;
+    padding: 1rem 0;
+
+    h1 {
+        // font-family: "Barriecito";
+        color: $color-white-1;
+        text-align: center;
+        letter-spacing: 3px;
+        // color: $color-primary-1;
+        font-weight: 500;
+        margin: 4rem 0;
+    }
+
+    .container {
+        height: 100%;
+        width: 50%;
+        margin: 0 auto;
+        // overflow: hidden;
+    }
+
+    .input-group {
+        width: 100%;
+    }
+
+    label {
+        display: inline-block;
+        // height: 2rem;
+        color: $color-white-1;
+        font-weight: 100;
+        // letter-spacing: 2px;
+    }
+
+    input {
+        display: inline-block;
+
+        // height: 2rem;
+        width: 100%;
+        // background: $color-silver-light-4;
+        border: none;
+        outline: none;
+        margin: 1rem 0;
+        padding: .5rem 1rem;
+        transition: all 0.3s ease;
+        font-size: .8rem;
+
+
+        &:focus {
+            // border: 2px solid black;
+            outline: none;
+            background: white;
+
+        }
+    }
+
+    textarea {
+        margin: 1rem 0;
+        width: 100%;
+        padding: 1rem;
+        font-size: .8rem;
+    }
+
+    .btn-submit {
+        background: $color-secondary-1;
+        color: $color-white-1;
+        border: none;
+        height: 3rem;
+        display: inline-block;
+        width: 100%;
+        margin: 1rem 0;
+        // padding: .5rem 1rem;
+        font-size: .8rem;
+        text-transform: uppercase;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}

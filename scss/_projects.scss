@@ -1,0 +1,187 @@
+.projects {
+    // background-color: red;
+
+    position: relative;
+    // min-height: 100%;
+    width: 85%;
+    margin: 0 auto 0 auto;
+    // z-index: 10;
+
+    // border: 1px solid bisque;
+    .container {
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 7.5vw;
+        grid-row-gap: 7.5vw;
+
+    }
+
+    h1 {
+        // font-family: "Barriecito";
+        text-align: center;
+        letter-spacing: 3px;
+        color: $color-primary-1;
+        margin-bottom: 4rem;
+    }
+
+
+
+    .item {
+        background: $color-primary-1;
+        height: 25vw;
+        overflow: hidden;
+        position: relative;
+
+
+
+        h3 {
+            color: $color-primary-1;
+            background: $color-white-1;
+            padding: 0 0 1rem 0;
+        }
+
+        img {
+            opacity: 0.8;
+            width: 100%;
+            transition: opacity .3s ease;
+
+            &:hover {
+                opacity: 1;
+            }
+
+        }
+
+
+
+        .btn-group:hover~img {
+            opacity: 1;
+        }
+
+        .btn-group {
+            bottom: 0%;
+            width: 100%;
+            position: absolute;
+            z-index: 2;
+            cursor: pointer;
+
+            display: flex;
+            // align-items: bottom;
+
+            .btn {
+                display: flex;
+                align-items: center;
+                padding: 1rem 2rem;
+                width: 50%;
+                transition: all .3s ease-out;
+
+
+
+                &:hover {
+
+                    span,
+                    svg {
+                        transform: translateX(10px);
+                    }
+                }
+
+            }
+
+            .btn-view {
+                @extend .btn;
+                background-color: rgba($color-primary-1, 0.8);
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    height: 100%;
+                    bottom: 0;
+                    width: 0%;
+                    left: 0;
+                    color: black;
+                    background: $color-white-1;
+                    opacity: 1;
+                    transition: all .3s ease-out;
+                }
+
+                &:hover::before {
+                    content: "";
+                    width: 10px;
+                    height: 100%;
+
+                }
+
+                &:hover {
+                    background-color: rgba($color-primary-1, 1);
+                }
+            }
+
+            .btn-github {
+                @extend .btn;
+                background-color: rgba($color-secondary-1, 0.8);
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    height: 100%;
+                    bottom: 0;
+                    width: 0;
+                    left: 50%;
+                    color: black;
+                    background: $color-white-1;
+                    opacity: 1;
+                    transition: all .3s ease-out;
+                }
+
+                &:hover::before {
+                    content: "";
+                    width: 10px;
+
+                }
+
+                &:hover {
+                    background-color: rgba($color-secondary-1, 1);
+
+
+                }
+            }
+
+            a {
+                // display: inline-block;
+
+                line-height: 0;
+                color: $color-white-1;
+                fill: $color-white-1;
+
+                svg {
+                    transition: all .3s ease;
+                }
+
+                span {
+                    transition: all .3s ease;
+                    font-size: 1rem;
+                    padding-left: 0.75rem;
+                    // background: green;
+                }
+
+
+
+            }
+        }
+
+        .item:hover {
+            img {
+                opacity: 1;
+            }
+        }
+    }
+
+
+
+
+
+
+
+
+
+}

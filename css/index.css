@@ -1,0 +1,252 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: 'Montserrat';
+  overflow-x: hidden;
+  background: #f8f9f9; }
+
+#particles-js {
+  background: linear-gradient(to right bottom, #34495e, #283747);
+  height: 85vh;
+  width: 100%; }
+
+.logo h1 {
+  color: #f8f9f9; }
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 0vh; }
+
+nav {
+  position: relative;
+  padding: 3rem 7.5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+ul {
+  width: 35%;
+  display: flex;
+  justify-content: space-between; }
+
+li {
+  list-style: none; }
+
+a {
+  color: #f8f9f9;
+  text-decoration: none;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  font-weight: 300; }
+
+#curve {
+  position: absolute;
+  bottom: 15vh; }
+
+#curve path {
+  fill: #f8f9f9; }
+
+#about {
+  height: 20vh;
+  position: absolute;
+  top: 20vh;
+  width: 100%;
+  opacity: 0.9;
+  z-index: 1; }
+  #about .title {
+    text-align: center; }
+  #about .name {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  #about h1 {
+    color: #f8f9f9;
+    font-weight: 100;
+    font-size: 2.5rem;
+    letter-spacing: .3vw;
+    margin: 2rem .75rem;
+    text-transform: uppercase; }
+  #about .name__last {
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: #f8f9f9; }
+  #about h2 {
+    font-size: 1rem;
+    font-family: 'Montserrat';
+    letter-spacing: .1vw;
+    color: #f8f9f9;
+    font-weight: 100; }
+  #about .icons__media {
+    margin: 4rem auto;
+    width: 25%;
+    display: flex;
+    justify-content: space-around; }
+    #about .icons__media a {
+      line-height: 0; }
+    #about .icons__media svg {
+      fill: #f8f9f9;
+      opacity: 0.7;
+      transition: all .3s ease;
+      cursor: pointer; }
+      #about .icons__media svg:hover {
+        opacity: 1;
+        transform: scale(1.1);
+        fill: #f8f9f9; }
+    #about .icons__media ion-icon {
+      font-size: 32px;
+      color: #f8f9f9; }
+
+.projects {
+  position: relative;
+  width: 85%;
+  margin: 0 auto 0 auto; }
+  .projects .container {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 7.5vw;
+    grid-row-gap: 7.5vw; }
+  .projects h1 {
+    text-align: center;
+    letter-spacing: 3px;
+    color: #34495e;
+    margin-bottom: 4rem; }
+  .projects .item {
+    background: #34495e;
+    height: 25vw;
+    overflow: hidden;
+    position: relative; }
+    .projects .item h3 {
+      color: #34495e;
+      background: #f8f9f9;
+      padding: 0 0 1rem 0; }
+    .projects .item img {
+      opacity: 0.8;
+      width: 100%;
+      transition: opacity .3s ease; }
+      .projects .item img:hover {
+        opacity: 1; }
+    .projects .item .btn-group:hover ~ img {
+      opacity: 1; }
+    .projects .item .btn-group {
+      bottom: 0%;
+      width: 100%;
+      position: absolute;
+      z-index: 2;
+      cursor: pointer;
+      display: flex; }
+      .projects .item .btn-group .btn, .projects .item .btn-group .btn-view, .projects .item .btn-group .btn-github {
+        display: flex;
+        align-items: center;
+        padding: 1rem 2rem;
+        width: 50%;
+        transition: all .3s ease-out; }
+        .projects .item .btn-group .btn:hover span, .projects .item .btn-group .btn-view:hover span, .projects .item .btn-group .btn-github:hover span,
+        .projects .item .btn-group .btn:hover svg,
+        .projects .item .btn-group .btn-view:hover svg,
+        .projects .item .btn-group .btn-github:hover svg {
+          transform: translateX(10px); }
+      .projects .item .btn-group .btn-view {
+        background-color: rgba(52, 73, 94, 0.8); }
+        .projects .item .btn-group .btn-view::before {
+          content: "";
+          position: absolute;
+          height: 100%;
+          bottom: 0;
+          width: 0%;
+          left: 0;
+          color: black;
+          background: #f8f9f9;
+          opacity: 1;
+          transition: all .3s ease-out; }
+        .projects .item .btn-group .btn-view:hover::before {
+          content: "";
+          width: 10px;
+          height: 100%; }
+        .projects .item .btn-group .btn-view:hover {
+          background-color: #34495e; }
+      .projects .item .btn-group .btn-github {
+        background-color: rgba(26, 188, 156, 0.8); }
+        .projects .item .btn-group .btn-github::before {
+          content: "";
+          position: absolute;
+          height: 100%;
+          bottom: 0;
+          width: 0;
+          left: 50%;
+          color: black;
+          background: #f8f9f9;
+          opacity: 1;
+          transition: all .3s ease-out; }
+        .projects .item .btn-group .btn-github:hover::before {
+          content: "";
+          width: 10px; }
+        .projects .item .btn-group .btn-github:hover {
+          background-color: #1abc9c; }
+      .projects .item .btn-group a {
+        line-height: 0;
+        color: #f8f9f9;
+        fill: #f8f9f9; }
+        .projects .item .btn-group a svg {
+          transition: all .3s ease; }
+        .projects .item .btn-group a span {
+          transition: all .3s ease;
+          font-size: 1rem;
+          padding-left: 0.75rem; }
+    .projects .item .item:hover img {
+      opacity: 1; }
+
+#contact {
+  display: relative;
+  margin-top: 6rem;
+  background: #34495e;
+  padding: 1rem 0; }
+  #contact h1 {
+    color: #f8f9f9;
+    text-align: center;
+    letter-spacing: 3px;
+    font-weight: 500;
+    margin: 4rem 0; }
+  #contact .container {
+    height: 100%;
+    width: 50%;
+    margin: 0 auto; }
+  #contact .input-group {
+    width: 100%; }
+  #contact label {
+    display: inline-block;
+    color: #f8f9f9;
+    font-weight: 100; }
+  #contact input {
+    display: inline-block;
+    width: 100%;
+    border: none;
+    outline: none;
+    margin: 1rem 0;
+    padding: .5rem 1rem;
+    transition: all 0.3s ease;
+    font-size: .8rem; }
+    #contact input:focus {
+      outline: none;
+      background: white; }
+  #contact textarea {
+    margin: 1rem 0;
+    width: 100%;
+    padding: 1rem;
+    font-size: .8rem; }
+  #contact .btn-submit {
+    background: #1abc9c;
+    color: #f8f9f9;
+    border: none;
+    height: 3rem;
+    display: inline-block;
+    width: 100%;
+    margin: 1rem 0;
+    font-size: .8rem;
+    text-transform: uppercase; }
+    #contact .btn-submit:hover {
+      cursor: pointer; }
