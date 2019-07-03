@@ -41,19 +41,20 @@
 
         // height: 2rem;
         width: 100%;
-        // background: $color-silver-light-4;
+        background: $color-white-1;
         border: none;
         outline: none;
+
         margin: 1rem 0;
         padding: .5rem 1rem;
-        transition: all 0.3s ease;
+        transition: all 0.3s ease-out;
         font-size: .8rem;
 
 
         &:focus {
             // border: 2px solid black;
-            outline: none;
-            background: white;
+            outline: solid rgba($color-white-1, 0.5) 5px;
+            background: $color-white-1;
 
         }
     }
@@ -63,6 +64,13 @@
         width: 100%;
         padding: 1rem;
         font-size: .8rem;
+        transition: all 0.3s ease-out;
+
+        // outline: none;
+        &:focus {
+            outline: solid rgba($color-white-1, 0.5) 5px;
+            background: $color-white-1;
+        }
     }
 
     .btn-submit {
@@ -73,11 +81,14 @@
         display: inline-block;
         width: 100%;
         margin: 1rem 0;
+        opacity: .8;
         // padding: .5rem 1rem;
         font-size: .8rem;
         text-transform: uppercase;
+        transition: all .3s ease-out;
 
         &:hover {
+            opacity: 1;
             cursor: pointer;
         }
     }

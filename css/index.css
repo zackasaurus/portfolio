@@ -34,7 +34,25 @@ ul {
   justify-content: space-between; }
 
 li {
-  list-style: none; }
+  list-style: none;
+  transition: all .3s ease-out; }
+  li::before {
+    content: "";
+    position: absolute;
+    bottom: -1rem;
+    height: 0px;
+    width: 100%;
+    background-color: white;
+    transition: all .3s ease-out; }
+  li:hover {
+    transform: translateY(-0.5rem); }
+    li:hover::before {
+      content: "";
+      position: absolute;
+      bottom: -1rem;
+      height: .5rem;
+      width: 100%;
+      background-color: white; }
 
 a {
   color: #f8f9f9;
@@ -224,20 +242,25 @@ a {
   #contact input {
     display: inline-block;
     width: 100%;
+    background: #f8f9f9;
     border: none;
     outline: none;
     margin: 1rem 0;
     padding: .5rem 1rem;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease-out;
     font-size: .8rem; }
     #contact input:focus {
-      outline: none;
-      background: white; }
+      outline: solid rgba(248, 249, 249, 0.5) 5px;
+      background: #f8f9f9; }
   #contact textarea {
     margin: 1rem 0;
     width: 100%;
     padding: 1rem;
-    font-size: .8rem; }
+    font-size: .8rem;
+    transition: all 0.3s ease-out; }
+    #contact textarea:focus {
+      outline: solid rgba(248, 249, 249, 0.5) 5px;
+      background: #f8f9f9; }
   #contact .btn-submit {
     background: #1abc9c;
     color: #f8f9f9;
@@ -246,7 +269,10 @@ a {
     display: inline-block;
     width: 100%;
     margin: 1rem 0;
+    opacity: .8;
     font-size: .8rem;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    transition: all .3s ease-out; }
     #contact .btn-submit:hover {
+      opacity: 1;
       cursor: pointer; }

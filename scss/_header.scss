@@ -37,8 +37,33 @@ ul {
 
 li {
     list-style: none;
-}
+    transition: all .3s ease-out;
 
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: -1rem;
+        height: 0px;
+        width: 100%;
+        // opacity: 0.5;
+        background-color: white;
+        transition: all .3s ease-out;
+    }
+
+    &:hover {
+        transform: translateY(-.5rem);
+
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: -1rem;
+            height: .5rem;
+            width: 100%;
+            background-color: white;
+
+        }
+    }
+}
 
 
 a {
